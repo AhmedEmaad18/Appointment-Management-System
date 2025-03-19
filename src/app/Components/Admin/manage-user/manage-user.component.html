@@ -1,0 +1,25 @@
+<!-- user-management.component.html -->
+<div class="container mt-5">
+  <h2>User Management Dashboard</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Email</th>
+        <th>Username</th>
+        <th>Role</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.email }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.role }}</td>
+        <td>
+          <button class="btn btn-warning btn-sm" (click)="editUser (user)">Edit</button>
+          <button class="btn btn-danger btn-sm" (click)="deleteUser (user.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

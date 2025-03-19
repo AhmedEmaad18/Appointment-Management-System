@@ -1,0 +1,22 @@
+.cancel-button {
+  background-color: transparent; /* Transparent background */
+  color: #f44336; /* Red color for cancel */
+  border: 1px solid #f44336; /* Red border */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.cancel-button:hover {
+  background-color: #f44336; /* Red background on hover */
+  color: white; /* White text on hover */
+}
+
+.save-button {
+  background-color: #4caf50; /* Green background */
+  color: white; /* White text */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.save-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}

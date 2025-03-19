@@ -1,0 +1,32 @@
+<div class="container mt-4">
+  <h2 class="text-center mb-4">Your Appointments</h2>
+  <ul class="list-group">
+    <li *ngFor="let appointment of appointments$ | async" class="list-group-item d-flex justify-content-between align-items-center">
+      <div class="flex-grow-1">
+        <div *ngIf="!appointment.isEditing">
+          <h5 class="mb-1">Date :{{ appointment.date }} at {{ appointment.time }}</h5>
+          <h3 class="mb-1">Doctor :{{ appointment.username}}</h3>
+          <p class="mb-0 text-muted"><strong>Patient Email:</strong>  <em>{{ appointment.email }}</em></p>
+        </div>
+        <div *ngIf="appointment.isEditing">
+          <input [(ngModel)]="appointment.date" placeholder="Date" class="form-control form-control-sm mb-2" />
+          <input [(ngModel)]="appointment.time" placeholder="Time" class="form-control form-control-sm" />
+        </div>
+      </div>
+      <div class="ml-2">
+        <button *ngIf="!appointment.isEditing" class="btn btn-warning btn-sm" (click)="appointment.isEditing = true">
+          <i class="fas fa-edit"></i> Edit
+        </button>
+        <button *ngIf="appointment.isEditing" class="btn btn-success btn-sm" (click)="saveAppointment(appointment)">
+          <i class="fas fa-save"></i> Save
+        </button>
+        <button class="btn btn-danger btn-sm" (click)="deleteAppointment(appointment.id)">
+          <i class="fas fa-trash-alt"></i> Delete
+        </button>
+        <button *ngIf="appointment.isEditing" class="btn btn-secondary btn-sm" (click)="appointment.isEditing = false">
+          <i class="fas fa-times"></i> Cancel
+        </button>
+      </div>
+    </li>
+  </ul>
+</div>

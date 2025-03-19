@@ -1,0 +1,23 @@
+<h2 mat-dialog-title>Edit User</h2>
+<mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput [(ngModel)]="data.email" required>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Username</mat-label>
+    <input matInput [(ngModel)]="data.username" required>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Role</mat-label>
+    <input matInput [(ngModel)]="data.role" required>
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button class="cancel-button" (click)="onNoClick()">
+    <mat-icon>cancel</mat-icon> Cancel
+  </button>
+  <button mat-raised-button color="primary" class="save-button" (click)="save()">
+    <mat-icon>save</mat-icon> Save
+  </button>
+</mat-dialog-actions>

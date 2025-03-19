@@ -1,0 +1,14 @@
+h2 {
+  margin-bottom: 20px;
+}
+
+.container {
+  max-width: 600px;
+}
+
+ngx-recaptcha {
+  display: block;
+  margin: 20px 0;
+  position: relative; 
+  z-index: 10;
+}

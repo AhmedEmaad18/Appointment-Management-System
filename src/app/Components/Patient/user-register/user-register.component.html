@@ -1,0 +1,31 @@
+<form (ngSubmit)="registerAppointment()" class="container mt-4">
+  <h2 class="text-center">Register Appointment</h2>
+
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" id="email" [(ngModel)]="email" name="email" class="form-control" required>
+  </div>
+
+  <div class="form-group">
+    <label for="doctor">Select Doctor:</label>
+    <select id="doctor" [(ngModel)]="selectedDoctorEmail" name="doctor" class="form-control" required>
+      <option value="" disabled selected>Select a doctor</option>
+      <option *ngFor="let doctor of doctors" [value]="doctor.username">
+        {{ doctor.username }}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="appointmentDate">Appointment Date:</label>
+    <input type="date" id="appointmentDate" [(ngModel)]="appointmentDate" name="appointmentDate" class="form-control" [min]="minDate" required>
+  </div>
+
+  <div class="form-group">
+    <label for="appointmentTime">Appointment Time:</label>
+    <input type="time" id="appointmentTime" [(ngModel)]="appointmentTime" name="appointmentTime" class="form-control" required>
+  </div>
+
+  <button type="submit" class="btn btn-primary btn-block">Register Appointment</button>
+</form>
+<div>
+ 
