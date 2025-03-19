@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './Components/login/login.component';
 import { RegisterComponent } from './Components/register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NgxCaptchaModule } from 'ngx-captcha'; 
+import { NgxCaptchaModule } from 'ngx-captcha';
 import { CommonModule } from '@angular/common';
 import { UserRegisterComponent } from './Components/Patient/user-register/user-register.component';
 import { getFirestore } from 'firebase/firestore';
@@ -45,13 +45,11 @@ import { EditUserComponent } from './Components/Admin/manage-user/edit-user/edit
     MatNativeDateModule,
     ReactiveFormsModule,
     MatDatepickerModule,MatIconModule
-
       ],
   providers: [
     provideClientHydration(withEventReplay()), provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore())
-
   ],
   bootstrap: [AppComponent],
    schemas: [CUSTOM_ELEMENTS_SCHEMA]

@@ -6,19 +6,22 @@ import { Router } from '@angular/router';
   selector: 'app-register',
   standalone: false,
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css'] // Corrected from styleUrl to styleUrls
+  styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
   email: string = '';
   password: string = '';
   username: string = '';
-  errorMessage: string = ''; // To hold error messages
+  errorMessage: string = '';
+  token: string | undefined; // Ensure this is a string
 
   constructor(private authService: AuthService, private router: Router) { }
-
+  resolved(cap:string){
+    this.token=cap;
+  }
   register() {
-    if (!this.email || !this.password || !this.username) {
-      this.errorMessage = 'All fields are required.';
+    if (!this.email || !this.password || !this.username || !this.token) {
+      this.errorMessage = 'All fields are required, including Captcha.';
       return;
     }
 
@@ -29,7 +32,7 @@ export class RegisterComponent {
       })
       .catch(error => {
         console.error('Registration error:', error);
-        this.errorMessage = error.message; 
+        this.errorMessage = error.message;
       });
   }
 }

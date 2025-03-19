@@ -7,5 +7,8 @@ export const environment = {
   storageBucket: "health-fe78c.firebasestorage.app",
   messagingSenderId: "130677245597",
   appId: "1:130677245597:web:b3636a75b4a32fc595f674"
+  },
+  recaptcha: {
+    siteKey: '6LfQF_kqAAAAAJC6G7g_Zx_3vEmmR7Me7vpaDrRA'
   }
 };
