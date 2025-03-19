@@ -52,7 +52,57 @@ For end-to-end (e2e) testing, run:
 ng e2e
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+# Appointment Registration System
+
+## Tech Stack
+
+- **Frontend**: Angular (version 14)
+- **Backend**: Node.js (version 16)
+- **Database**:firebase(version 17.0)
+- **Libraries**:
+  - Angular Forms
+  - Angular Router
+  - Bootstrap (version 5.1)
+  - RxJS (version 7.4)
+  - Axios (for HTTP requests)
+  -Angular material
+  
+## Project Setup Procedure
+
+To set up the project locally, follow these steps:
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/yourusername/appointment-registration.git
+   cd appointment-registration
+2.npm install
+3.npm start
+Project Overview
+This project is an appointment registration system that allows patients to register appointments with doctors. The application is built using Angular for the frontend and Node.js for the backend.
+
+Approach
+I approached this project by first outlining the requirements and then designing the user interface using Angular components. I utilized Angular's reactive forms for form handling and validation.
+
+What I Liked:
+
+The modularity of Angular made it easy to manage components and services.
+The use of RxJS for handling asynchronous data streams was powerful and efficient.
+What I Didn’t Like:
+
+Initial setup and configuration of Angular can be overwhelming for beginners.
+Debugging asynchronous code can sometimes be challenging.
+Challenges Faced:
+
+Integrating the backend with the frontend required careful handling of API calls and error management.
+Ensuring proper form validation and user feedback was a bit tricky but ultimately rewarding.
+Pending Tasks:
+Implement appointment conflict checking to prevent double bookings.
+Improve UI/UX with better styling and responsive design.
+Write unit tests for components and services to ensure code quality.
+Deploy the application to a cloud service (e.g., Heroku, AWS).
+Testing
+To ensure the quality of the application, unit tests and end-to-end tests can be run using the following commands:
+
 
 ## Additional Resources
 
